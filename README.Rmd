@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# fixbatch
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+## Update
+
+```{r echo=FALSE}
+#devtools::update_packages("fixbatch")
+```
+
+## Insatll
+
+```{r echo=FALSE}
+#devtools::install_github("wangjiaxuan/fixbatch")
+```
+
+```{r setup}
+library(fixbatch)
+```
+
+## Function
+
+### col_cv 
+
+### col_sum
+
+### housekeep
+
+### norm_fix

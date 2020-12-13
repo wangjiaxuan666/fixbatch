@@ -1,0 +1,41 @@
+---
+title: "fixbatch"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fixbatch}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Update
+
+```{r echo=FALSE}
+#devtools::update_packages("fixbatch")
+```
+
+## Insatll
+
+```{r echo=FALSE}
+#devtools::install_github("wangjiaxuan/fixbatch")
+```
+
+```{r setup}
+library(fixbatch)
+```
+
+## Function
+
+### col_cv 
+
+### col_sum
+
+### housekeep
+
+### norm_fix

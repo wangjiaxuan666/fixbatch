@@ -8,6 +8,9 @@
 
 ## Update
 
+- [ ] add the `cpm` function to calculate the adjuts expression cpm value form `egdeR`
+- [ ] add the `combat` function form `sva`
+
 ## Insatll
 
 ``` r

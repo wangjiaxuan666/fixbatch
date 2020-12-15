@@ -26,3 +26,7 @@ library(fixbatch)
 ### housekeep
 
 ### norm\_fix
+
+## website
+
+[处理批次效应连续剧第一集(失败的R包)](https://abego.cn/2020/12/14/remove-the-batch-effect-series-1-a-imcomplete-r-package/)

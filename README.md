@@ -8,6 +8,7 @@
 
 ## Update
 
+<<<<<<< HEAD
 ### fix bug 2020-12-17
 
 -   [x] add the function to select housekeep gene Separately from every
@@ -21,6 +22,10 @@
 the R packages is full fo bugs, beacuse it’s a naive packagse, so I
 suggest every time when you use the R packages, should update R packages
 fristly. remember IT is everytime!
+=======
+- [ ] add the `cpm` function to calculate the adjuts expression cpm value form `egdeR`
+- [ ] add the `combat` function form `sva`
+>>>>>>> df358909355a58c9055eecbb5f4f704bb99acceb
 
 ## Insatll
 
@@ -50,6 +55,12 @@ he function to select housekeep gene Separately from every batch group
 
 ### norm\_fix
 
+<<<<<<< HEAD
 norm\_fix allows users to adjust for batch effects in datasets where the
 batch covariate is known, using the packages `preprocessCore`, and the
 function normalize.quantiles.
+=======
+## website
+
+[处理批次效应连续剧第一集(失败的R包)](https://abego.cn/2020/12/14/remove-the-batch-effect-series-1-a-imcomplete-r-package/)
+>>>>>>> df358909355a58c9055eecbb5f4f704bb99acceb

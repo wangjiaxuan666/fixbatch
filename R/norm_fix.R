@@ -1,4 +1,7 @@
-#' Title Overall data were adjusted based on quantile value of housekeeping genes
+#' Adjust for batch effects using an housekeep gene
+#'
+#' norm_fix allows users to adjust for batch effects in datasets where the batch covariate is known, using the
+#' packages preprocessCore, and the function normalize.quantiles.
 #'
 #' @param data must be a data.frame or matrix
 #' @param ... parameter see `?housekeep`
@@ -14,7 +17,7 @@
 #' y = as.data.frame(y)
 #' #y_fix2 = norm_fix(y,expcv = 0.3, exphigh = 0.8, explow = 0.4)
 norm_fix <- function(data, ...){
-  data_hk = housekeep(data, ...)
+  data_hk = batch_housekeep(data, ...)
   norm_q = preprocessCore::normalize.quantiles.determine.target(as.matrix(data_hk))
   data_norm_adjust = preprocessCore::normalize.quantiles.use.target(as.matrix(data),norm_q)
   colnames(data_norm_adjust) = colnames(data)

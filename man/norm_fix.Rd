@@ -2,7 +2,7 @@
 % Please edit documentation in R/norm_fix.R
 \name{norm_fix}
 \alias{norm_fix}
-\title{Title Overall data were adjusted based on quantile value of housekeeping genes}
+\title{Adjust for batch effects using an housekeep gene}
 \usage{
 norm_fix(data, ...)
 }
@@ -15,7 +15,8 @@ norm_fix(data, ...)
 data
 }
 \description{
-Title Overall data were adjusted based on quantile value of housekeeping genes
+norm_fix allows users to adjust for batch effects in datasets where the batch covariate is known, using the
+packages preprocessCore, and the function normalize.quantiles.
 }
 \examples{
 y <- matrix( rpois(1000, lambda=5), nrow=200 )

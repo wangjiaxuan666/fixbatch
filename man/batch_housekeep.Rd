@@ -4,18 +4,33 @@
 \alias{batch_housekeep}
 \title{Found housekeep genes in batch effects group}
 \usage{
-batch_housekeep(data, batch = NULL, expcv = 1, exphigh = 1, explow = 0)
+batch_housekeep(
+  data,
+  batch = NULL,
+  expcv = 1,
+  exphigh = 1,
+  explow = 0,
+  housekeep_gene = NULL
+)
 }
 \arguments{
-\item{data}{Genomic measure matrix (dimensions probe x sample) - for example, expression matrix}
+\item{data}{Genomic measure matrix (dimensions probe x sample) - for example,
+expression matrix}
 
 \item{batch}{must be a vctor,{Batch covariate (only one batch allowed)}}
 
-\item{expcv}{a number range 0 to 1, Sets the maximum quantile value of the coefficient of variation}
+\item{expcv}{a number range 0 to 1, Sets the maximum quantile value of the
+coefficient of variation}
 
-\item{exphigh}{a number range 0 to 1, Sets the maximum quantile value of expression sum}
+\item{exphigh}{a number range 0 to 1, Sets the maximum quantile value of
+expression sum}
 
-\item{explow}{a number range 0 to 1, Sets the minimum quantile value of expression sum}
+\item{explow}{a number range 0 to 1, Sets the minimum quantile value of
+expression sum}
+
+\item{housekeep_gene}{This is a very difficult word to spell, so that you can
+think carefully when you use it. the input must be a vector and including by
+the rownames of input data}
 }
 \value{
 data A housekeep gene x sample genomic measure matrix
@@ -35,4 +50,5 @@ y[19,] <- c(1,0,1,0,1,0)
 data = y
 batch = rep(1:2, each = 3)
 #re = batch_housekeep(data, bacth, expcv = 1, exphigh, explow = 0)
+#re1 = batch_housekeep(data,batch,housekeep_gene = c(paste(rep("gene",3),c(6:9,2000))))
 }

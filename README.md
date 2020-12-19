@@ -8,10 +8,13 @@
 
 ## Update
 
-### fix bug 2020-12-17
+### fix bug 2020-12-19
 
 -   [x] add the function to select housekeep gene Separately from every
     batch group
+
+-   [x] add the function to select some housekeep gene that you know
+    its’ function or famous stable gene like actinB.
 
 -   [ ] add the `cpm` function to calculate the adjuts expression cpm
     value form `egdeR`
@@ -20,7 +23,7 @@
 
 the R packages is full fo bugs, beacuse it’s a naive packagse, so I
 suggest every time when you use the R packages, should update R packages
-fristly. remember IT is everytime!
+fristly. Remember this step everytimes!
 
 ## Insatll
 
@@ -46,7 +49,8 @@ stable observation value is selected
 
 ## batch\_housekeep
 
-he function to select housekeep gene Separately from every batch group
+The function is made for select housekeep gene Separately from every
+batch group
 
 ### norm\_fix
 

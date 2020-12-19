@@ -33,16 +33,18 @@ body {
 <!-- badges: end -->
 
 <h2 id="update">Update</h2>
-<h3 id="fix-bug-2020-12-17">fix bug 2020-12-17</h3>
+<h3 id="fix-bug-2020-12-19">fix bug 2020-12-19</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled checked></input>
 add the function to select housekeep gene Separately from every batch group</li>
+<li><input type="checkbox" disabled checked></input>
+add the function to select some housekeep gene that you know its’ function or famous stable gene like actinB.</li>
 <li><input type="checkbox" disabled></input>
 add the <code>cpm</code> function to calculate the adjuts expression cpm value form <code>egdeR</code></li>
 <li><input type="checkbox" disabled></input>
 add the <code>combat</code> function form <code>sva</code></li>
 </ul>
-<p>the R packages is full fo bugs, beacuse it’s a naive packagse, so I suggest every time when you use the R packages, should update R packages fristly. remember IT is everytime!</p>
+<p>the R packages is full fo bugs, beacuse it’s a naive packagse, so I suggest every time when you use the R packages, should update R packages fristly. Remember this step everytimes!</p>
 <h2 id="insatll">Insatll</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixbatch)</span></code></pre></div>
 <h2 id="function">Function</h2>
@@ -53,7 +55,7 @@ add the <code>combat</code> function form <code>sva</code></li>
 <h3 id="housekeep">housekeep</h3>
 <p>According to the coefficient of variation and the expression sum, the stable observation value is selected</p>
 <h2 id="batch_housekeep">batch_housekeep</h2>
-<p>he function to select housekeep gene Separately from every batch group</p>
+<p>The function is made for select housekeep gene Separately from every batch group</p>
 <h3 id="norm_fix">norm_fix</h3>
 <p>norm_fix allows users to adjust for batch effects in datasets where the batch covariate is known, using the packages <code>preprocessCore</code>, and the function normalize.quantiles.</p>
 <h2 id="开发过程">开发过程</h2>

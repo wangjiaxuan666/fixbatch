@@ -14,8 +14,12 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
-    preprocessCore
+    preprocessCore,
+    edgeR,
+    xbox (>= 0.5)
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Remotes:  
+    wangjiaxuan666/xbox

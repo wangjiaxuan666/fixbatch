@@ -17,6 +17,7 @@
 #' the rownames of input data
 #'
 #' @return data A housekeep gene x sample genomic measure matrix
+#' @export batch_housekeep
 #' @importFrom stats cor
 #'
 #' @examples

@@ -22,11 +22,15 @@ knitr::opts_chunk$set(
 
 ### fix bug 2020-12-19
 
+- [x] is have done
+
+- [ ] is not, but will be done next update
+
 - [x] add the function to select housekeep gene Separately from every batch group
 
 - [x] add the function to select some housekeep gene that you know its' function or famous stable gene like actinB.
 
-- [ ] add the `cpm` function to calculate the adjuts expression cpm value form `egdeR`
+- [x] add the `cpm` function to calculate the adjuts expression cpm value form `egdeR`
 - [ ] add the `combat` function form `sva`
 
 
@@ -54,19 +58,19 @@ calculate the coefficient of variation of the row value in a gene expression mat
 
 ### col_sum
 
-calculate the sum the row value in a gene expression matrix.
+calculate the sum of rows value in a gene expression matrix.
 
 ### housekeep
 
 According to the coefficient of variation and the expression sum, the stable observation value is selected
 
-## batch_housekeep
+### batch_housekeep
 
-The function is made for select housekeep gene Separately from every batch group
+The function is made for select housekeep gene separately from every batch group
 
 ### norm_fix
 
-norm_fix allows users to adjust for batch effects in datasets where the batch covariate is known, using the packages `preprocessCore`, and the function normalize.quantiles.
+norm_fix allows users to adjust for batch effects in datasets where the batch covariate is known, using the packages `preprocessCore`, and the function `normalize.quantiles`.
 
 ## 开发过程
 

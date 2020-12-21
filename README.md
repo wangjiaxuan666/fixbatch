@@ -10,13 +10,17 @@
 
 ### fix bug 2020-12-19
 
+-   [x] is have done
+
+-   [ ] is not, but will be done next update
+
 -   [x] add the function to select housekeep gene Separately from every
     batch group
 
 -   [x] add the function to select some housekeep gene that you know
     its’ function or famous stable gene like actinB.
 
--   [ ] add the `cpm` function to calculate the adjuts expression cpm
+-   [x] add the `cpm` function to calculate the adjuts expression cpm
     value form `egdeR`
 
 -   [ ] add the `combat` function form `sva`
@@ -40,23 +44,23 @@ expression matrix.
 
 ### col\_sum
 
-calculate the sum the row value in a gene expression matrix.
+calculate the sum of rows value in a gene expression matrix.
 
 ### housekeep
 
 According to the coefficient of variation and the expression sum, the
 stable observation value is selected
 
-## batch\_housekeep
+### batch\_housekeep
 
-The function is made for select housekeep gene Separately from every
+The function is made for select housekeep gene separately from every
 batch group
 
 ### norm\_fix
 
 norm\_fix allows users to adjust for batch effects in datasets where the
 batch covariate is known, using the packages `preprocessCore`, and the
-function normalize.quantiles.
+function `normalize.quantiles`.
 
 ## 开发过程
 

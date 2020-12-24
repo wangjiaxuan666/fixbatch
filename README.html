@@ -46,6 +46,8 @@ add the <code>edger_fix</code> function to calculate the adjuts expression cpm v
 <ul class="task-list">
 <li><input type="checkbox" disabled checked></input>
 add the <code>pvca</code> function form pvca packgas in Bioconductor,this function can help us to estimate factors’ partition of the total variability. I have made some optimizations,such as suppressMessages on useless messages, add test of input data have NAs,fix the the R packages dependency relationship. and add <code>pvca_plot</code> plot function to display the result.</li>
+<li><input type="checkbox" disabled checked></input>
+add the <code>combat_fix</code> copy form <code>sva</code>. IT is exactly the same a sva::combat, only changing name. the sva website is “<a href="https://bioconductor.org/packages/release/bioc/html/sva.html">https://bioconductor.org/packages/release/bioc/html/sva.html</a>”</li>
 </ul>
 <p>the R packages is full fo bugs, beacuse it’s a naive packagse, so I suggest every time when you use the R packages, should update R packages fristly. Remember this step everytimes!</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="st">&quot;fixbatch&quot;</span>)</span></code></pre></div>
@@ -73,6 +75,7 @@ add the <code>pvca</code> function form pvca packgas in Bioconductor,this functi
 <ol style="list-style-type: decimal">
 <li><a href="https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A">处理批次效应连续剧第一集（失败的R包）</a></li>
 <li><a href="https://mp.weixin.qq.com/s/pWO9em16WE90T-6vxO3HMg">处理批次效应连续剧第二集（R包小有成效）</a></li>
+<li><a href="https://abego.cn/2020/12/24/remove-the-batch-effect-series-3-r-package-more-power/">处理批次效应连续剧第三集（R包基本OK）</a></li>
 </ol>
 
 </body>

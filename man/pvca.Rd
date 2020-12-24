@@ -4,7 +4,7 @@
 \alias{pvca}
 \title{A function for principal variance component analysis}
 \usage{
-pvca(counts, meta, threshold, inter)
+pvca(counts, meta, threshold = 0.7, inter = TRUE)
 }
 \arguments{
 \item{counts}{The Normalized(e.g. TMM)/ log-transformed reads count matrix from sequencing data (row:gene/feature, col:sample)}

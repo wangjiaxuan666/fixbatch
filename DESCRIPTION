@@ -17,7 +17,8 @@ Imports:
     preprocessCore,
     edgeR,
     xbox (>= 0.5),
-    lme4
+    lme4,
+    sva
 Suggests: 
     knitr,
     rmarkdown

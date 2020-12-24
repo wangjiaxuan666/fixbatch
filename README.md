@@ -28,6 +28,10 @@
     packages dependency relationship. and add `pvca_plot` plot function
     to display the result.
 
+-   [x] add the `combat_fix` copy form `sva`. IT is exactly the same a
+    sva::combat, only changing name. the sva website is
+    “<https://bioconductor.org/packages/release/bioc/html/sva.html>”
+
 the R packages is full fo bugs, beacuse it’s a naive packagse, so I
 suggest every time when you use the R packages, should update R packages
 fristly. Remember this step everytimes!
@@ -100,3 +104,4 @@ component analysis
 
 1.  [处理批次效应连续剧第一集（失败的R包）](https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A)
 2.  [处理批次效应连续剧第二集（R包小有成效）](https://mp.weixin.qq.com/s/pWO9em16WE90T-6vxO3HMg)
+3.  [处理批次效应连续剧第三集（R包基本OK）](https://abego.cn/2020/12/24/remove-the-batch-effect-series-3-r-package-more-power/)

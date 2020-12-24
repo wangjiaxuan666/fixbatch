@@ -21,7 +21,7 @@
 #' #data = Golub_Merge@assayData[["exprs"]]
 #' #pvcaObj <- pvca(data, batch.factors, pct_threshold,inter = FALSE)
 
-pvca <- function(counts, meta, threshold, inter){
+pvca <- function(counts, meta, threshold = 0.7, inter = TRUE){
 
   # need add test of the input dat wether have NAs
   if(any(is.na(meta))){

@@ -16,10 +16,11 @@ RoxygenNote: 7.1.1
 Imports: 
     preprocessCore,
     edgeR,
-    xbox (>= 0.5)
+    xbox (>= 0.5),
+    lme4
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-Remotes:  
+Remotes: 
     wangjiaxuan666/xbox

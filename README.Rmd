@@ -20,30 +20,30 @@ knitr::opts_chunk$set(
 
 ## Update
 
-### fix bug 2020-12-19
-
-- [x] is have done
-
-- [ ] is not, but will be done next update
+### fix bug 2020-12-24
 
 - [x] add the function to select housekeep gene Separately from every batch group
 
 - [x] add the function to select some housekeep gene that you know its' function or famous stable gene like actinB.
 
-- [x] add the `cpm` function to calculate the adjuts expression cpm value form `egdeR`
-- [ ] add the `combat` function form `sva`
+- [x] add the `edger_fix` function to calculate the adjuts expression cpm value form `egdeR`
+
+### fix bug 2020-12-29
+
+- [x] add the `pvca` function form pvca packgas in Bioconductor,this function can help us  to estimate factors' partition of the total variability. I have made some optimizations,such as suppressMessages on useless
+ messages, add test of input data have NAs,fix the the R packages dependency relationship. and add `pvca_plot` plot function to display the result.
 
 
 the R packages is full fo bugs, beacuse it's a naive packagse, so I suggest every time when you use the R packages, should update R packages fristly. Remember this step everytimes!
 
-```{r echo=FALSE}
-#devtools::update_packages("fixbatch")
+```{r eval=FALSE}
+devtools::update_packages("fixbatch")
 ```
 
 ## Insatll
 
-```{r echo=FALSE}
-#devtools::install_github("wangjiaxuan/fixbatch")
+```{r eval=FALSE}
+devtools::install_github("wangjiaxuan/fixbatch")
 ```
 
 ```{r setup}
@@ -72,9 +72,23 @@ The function is made for select housekeep gene separately from every batch group
 
 norm_fix allows users to adjust for batch effects in datasets where the batch covariate is known, using the packages `preprocessCore`, and the function `normalize.quantiles`.
 
+### edger_fix
+
+Calculate normalization factors to scale the raw library sizes. the script is created by Yunshun Chen. The work use the function calcNormFactors and cpm.
+
+### pvca
+
+The function is written based on the 'pvcaBatchAssess' function of the PVCA R package(http://watson.nci.nih.gov/bioc_mirror/packages/release/bioc/manuals/pvca/man/pvca.pdf).
+and adjust by Donghyung Lee for changed slightly to make it more efficient and flexible for sequencing read counts data(https://github.com/dleelab/pvca). But it didn't update since 4 years ago.
+My new R packages fixbatch need the function to estimate factor's partition of the total variability. So I fork the packages and Adjust in my own style.
+
+### pvca_plot
+
+Title A plot function for dispaly the result of principal variance component analysis
+
 ## 开发过程
 
-[处理批次效应连续剧第一集（失败的R包）](https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A)
-[处理批次效应连续剧第二集（R包小有成效）](https://mp.weixin.qq.com/s/pWO9em16WE90T-6vxO3HMg)
+1. [处理批次效应连续剧第一集（失败的R包）](https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A)
+2. [处理批次效应连续剧第二集（R包小有成效）](https://mp.weixin.qq.com/s/pWO9em16WE90T-6vxO3HMg)
 
 

@@ -33,24 +33,25 @@ body {
 <!-- badges: end -->
 
 <h2 id="update">Update</h2>
-<h3 id="fix-bug-2020-12-19">fix bug 2020-12-19</h3>
+<h3 id="fix-bug-2020-12-24">fix bug 2020-12-24</h3>
 <ul class="task-list">
-<li><input type="checkbox" disabled checked></input>
-is have done</li>
-<li><input type="checkbox" disabled></input>
-is not, but will be done next update</li>
 <li><input type="checkbox" disabled checked></input>
 add the function to select housekeep gene Separately from every batch group</li>
 <li><input type="checkbox" disabled checked></input>
 add the function to select some housekeep gene that you know its’ function or famous stable gene like actinB.</li>
 <li><input type="checkbox" disabled checked></input>
-add the <code>cpm</code> function to calculate the adjuts expression cpm value form <code>egdeR</code></li>
-<li><input type="checkbox" disabled></input>
-add the <code>combat</code> function form <code>sva</code></li>
+add the <code>edger_fix</code> function to calculate the adjuts expression cpm value form <code>egdeR</code></li>
+</ul>
+<h3 id="fix-bug-2020-12-29">fix bug 2020-12-29</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled checked></input>
+add the <code>pvca</code> function form pvca packgas in Bioconductor,this function can help us to estimate factors’ partition of the total variability. I have made some optimizations,such as suppressMessages on useless messages, add test of input data have NAs,fix the the R packages dependency relationship. and add <code>pvca_plot</code> plot function to display the result.</li>
 </ul>
 <p>the R packages is full fo bugs, beacuse it’s a naive packagse, so I suggest every time when you use the R packages, should update R packages fristly. Remember this step everytimes!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="st">&quot;fixbatch&quot;</span>)</span></code></pre></div>
 <h2 id="insatll">Insatll</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixbatch)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;wangjiaxuan/fixbatch&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixbatch)</span></code></pre></div>
 <h2 id="function">Function</h2>
 <h3 id="col_cv">col_cv</h3>
 <p>calculate the coefficient of variation of the row value in a gene expression matrix.</p>
@@ -62,8 +63,17 @@ add the <code>combat</code> function form <code>sva</code></li>
 <p>The function is made for select housekeep gene separately from every batch group</p>
 <h3 id="norm_fix">norm_fix</h3>
 <p>norm_fix allows users to adjust for batch effects in datasets where the batch covariate is known, using the packages <code>preprocessCore</code>, and the function <code>normalize.quantiles</code>.</p>
+<h3 id="edger_fix">edger_fix</h3>
+<p>Calculate normalization factors to scale the raw library sizes. the script is created by Yunshun Chen. The work use the function calcNormFactors and cpm.</p>
+<h3 id="pvca">pvca</h3>
+<p>The function is written based on the ‘pvcaBatchAssess’ function of the PVCA R package(<a href="http://watson.nci.nih.gov/bioc_mirror/packages/release/bioc/manuals/pvca/man/pvca.pdf">http://watson.nci.nih.gov/bioc_mirror/packages/release/bioc/manuals/pvca/man/pvca.pdf</a>). and adjust by Donghyung Lee for changed slightly to make it more efficient and flexible for sequencing read counts data(<a href="https://github.com/dleelab/pvca">https://github.com/dleelab/pvca</a>). But it didn’t update since 4 years ago. My new R packages fixbatch need the function to estimate factor’s partition of the total variability. So I fork the packages and Adjust in my own style.</p>
+<h3 id="pvca_plot">pvca_plot</h3>
+<p>Title A plot function for dispaly the result of principal variance component analysis</p>
 <h2 id="开发过程">开发过程</h2>
-<p><a href="https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A">处理批次效应连续剧第一集（失败的R包）</a> <a href="https://mp.weixin.qq.com/s/pWO9em16WE90T-6vxO3HMg">处理批次效应连续剧第二集（R包小有成效）</a></p>
+<ol style="list-style-type: decimal">
+<li><a href="https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A">处理批次效应连续剧第一集（失败的R包）</a></li>
+<li><a href="https://mp.weixin.qq.com/s/pWO9em16WE90T-6vxO3HMg">处理批次效应连续剧第二集（R包小有成效）</a></li>
+</ol>
 
 </body>
 </html>

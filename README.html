@@ -42,12 +42,17 @@ add the function to select some housekeep gene that you know its’ function or 
 <li><input type="checkbox" disabled checked></input>
 add the <code>edger_fix</code> function to calculate the adjuts expression cpm value form <code>egdeR</code></li>
 </ul>
-<h3 id="fix-bug-2020-12-29">fix bug 2020-12-29</h3>
+<h3 id="fix-bug-2020-12-27">fix bug 2020-12-27</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled checked></input>
 add the <code>pvca</code> function form pvca packgas in Bioconductor,this function can help us to estimate factors’ partition of the total variability. I have made some optimizations,such as suppressMessages on useless messages, add test of input data have NAs,fix the the R packages dependency relationship. and add <code>pvca_plot</code> plot function to display the result.</li>
 <li><input type="checkbox" disabled checked></input>
 add the <code>combat_fix</code> copy form <code>sva</code>. IT is exactly the same a sva::combat, only changing name. the sva website is “<a href="https://bioconductor.org/packages/release/bioc/html/sva.html">https://bioconductor.org/packages/release/bioc/html/sva.html</a>”</li>
+</ul>
+<h3 id="add-function-2020-12-29">add function 2020-12-29</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled checked></input>
+add the <code>snm_fix</code> function to fix batch effect and return the normalizeed data. The detailed theory can be found on the website(<a href="http://www.bioconductor.org/packages/release/bioc/html/snm.html">http://www.bioconductor.org/packages/release/bioc/html/snm.html</a>). I adjusted the input style of parameters to a unified form in fixbatch packages.This is not as simple as I imagined.</li>
 </ul>
 <p>the R packages is full fo bugs, beacuse it’s a naive packagse, so I suggest every time when you use the R packages, should update R packages fristly. Remember this step everytimes!</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="st">&quot;fixbatch&quot;</span>)</span></code></pre></div>
@@ -71,6 +76,8 @@ add the <code>combat_fix</code> copy form <code>sva</code>. IT is exactly the sa
 <p>The function is written based on the ‘pvcaBatchAssess’ function of the PVCA R package(<a href="http://watson.nci.nih.gov/bioc_mirror/packages/release/bioc/manuals/pvca/man/pvca.pdf">http://watson.nci.nih.gov/bioc_mirror/packages/release/bioc/manuals/pvca/man/pvca.pdf</a>). and adjust by Donghyung Lee for changed slightly to make it more efficient and flexible for sequencing read counts data(<a href="https://github.com/dleelab/pvca">https://github.com/dleelab/pvca</a>). But it didn’t update since 4 years ago. My new R packages fixbatch need the function to estimate factor’s partition of the total variability. So I fork the packages and Adjust in my own style.</p>
 <h3 id="pvca_plot">pvca_plot</h3>
 <p>Title A plot function for dispaly the result of principal variance component analysis</p>
+<h3 id="snm_fix">snm_fix</h3>
+<p>The function base on snm R packaegs(<a href="http://www.bioconductor.org/packages/release/bioc/html/snm.html">http://www.bioconductor.org/packages/release/bioc/html/snm.html</a>), packaged into fixbatch. Citation within R, enter citation(“snm”)).</p>
 <h2 id="开发过程">开发过程</h2>
 <ol style="list-style-type: decimal">
 <li><a href="https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A">处理批次效应连续剧第一集（失败的R包）</a></li>

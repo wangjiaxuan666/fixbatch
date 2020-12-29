@@ -19,7 +19,7 @@
 -   [x] add the `edger_fix` function to calculate the adjuts expression
     cpm value form `egdeR`
 
-### fix bug 2020-12-29
+### fix bug 2020-12-27
 
 -   [x] add the `pvca` function form pvca packgas in Bioconductor,this
     function can help us to estimate factors’ partition of the total
@@ -31,6 +31,14 @@
 -   [x] add the `combat_fix` copy form `sva`. IT is exactly the same a
     sva::combat, only changing name. the sva website is
     “<https://bioconductor.org/packages/release/bioc/html/sva.html>”
+
+### add function 2020-12-29
+
+-   [x] add the `snm_fix` function to fix batch effect and return the
+    normalizeed data. The detailed theory can be found on the
+    website(<http://www.bioconductor.org/packages/release/bioc/html/snm.html>).
+    I adjusted the input style of parameters to a unified form in
+    fixbatch packages.This is not as simple as I imagined.
 
 the R packages is full fo bugs, beacuse it’s a naive packagse, so I
 suggest every time when you use the R packages, should update R packages
@@ -99,6 +107,12 @@ Adjust in my own style.
 
 Title A plot function for dispaly the result of principal variance
 component analysis
+
+### snm\_fix
+
+The function base on snm R
+packaegs(<http://www.bioconductor.org/packages/release/bioc/html/snm.html>),
+packaged into fixbatch. Citation within R, enter citation(“snm”)).
 
 ## 开发过程
 

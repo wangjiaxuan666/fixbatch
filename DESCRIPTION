@@ -18,7 +18,8 @@ Imports:
     edgeR,
     xbox (>= 0.5),
     lme4,
-    sva
+    sva,
+    snm
 Suggests: 
     knitr,
     rmarkdown

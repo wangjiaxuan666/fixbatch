@@ -69,14 +69,10 @@ batch_housekeep <- function(data,
     data <- data[no_zero_rows, ]
   }
 
-  #检验彼此分组中只有一个样本的组
+  #检验批次分组中只有一个样本的组
 
   if(any(table(batch)==1)){
     stop("Note: someone batch has only one sample, can't caculate cv value")
-  }
-
-  if(!is.vector(housekeep_gene)){
-    stop("Note: housekeep_gene must be vector")
   }
   #这里至少还要补充一个基因的位置核对，和id核对
 
@@ -85,6 +81,10 @@ batch_housekeep <- function(data,
   #检验是否指定内参基因
 
   if(!is.null(housekeep_gene)){
+    #核对输入是否向量
+    if(!is.vector(housekeep_gene)){
+      stop("Note: housekeep_gene must be vector")
+    }
     #指定管家基因
     hkid = housekeep_gene
   } else {

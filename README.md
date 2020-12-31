@@ -1,18 +1,17 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# fixbatch
-
-**Author**: Jiaxuan Wang
-
 <!-- badges: start -->
 
-![](https://img.shields.io/github/issues/wangjiaxuan666/fixbatch)
-![](https://img.shields.io/github/forks/wangjiaxuan666/fixbatch)
-![](https://img.shields.io/github/stars/wangjiaxuan666/fixbatch)
+[![](https://img.shields.io/github/issues/wangjiaxuan666/fixbatch)](https://img.shields.io/github/issues/wangjiaxuan666/fixbatch)
+[![](https://img.shields.io/github/issues/wangjiaxuan666/fixbatch)](https://img.shields.io/github/forks/wangjiaxuan666/fixbatch)
+[![](https://img.shields.io/github/issues/wangjiaxuan666/fixbatch)](https://img.shields.io/github/stars/wangjiaxuan666/fixbatch)
 <!-- badges: end -->
 
-***Fix the batch effect on gene expression workflow!***
+# fixbatch:wrench: <img src='https://pic-1259340288.cos.ap-guangzhou.myqcloud.com/img/fixbatch_hexSticker.png' align="right" height="139" />
+
+**Author**: [Jiaxuan Wang](https://abego.cn/) :pencil:
+
+[![](https://img.shields.io/badge/follow%20me%20on-WeChat-green.svg)](https://pic-1259340288.cos.ap-guangzhou.myqcloud.com/back/qrcode_for_Wechat.jpg)
+
+***:wrench: Fix the batch effect on gene expression workflow!***
 
 Every Gene Expression study such as RNA-seq or Array, has an question
 which the researchers want to explain. But in fact, The interested
@@ -42,11 +41,12 @@ The workflow employs several successive procedures available in :
 
 <img src="man/figures/workflow-en.png" width="100%" />
 
+:cn:
 [流程图中文版本](https://pic-1259340288.cos.ap-guangzhou.myqcloud.com/img/workflow-cn.jpg)
 
 ## Update log
 
-### fix bug 2020-12-24
+fix bug 2020-12-24
 
 -   [x] add the function to select housekeep gene Separately from every
     batch group
@@ -57,7 +57,7 @@ The workflow employs several successive procedures available in :
 -   [x] add the `edger_fix` function to calculate the adjuts expression
     cpm value form `egdeR`
 
-### fix bug 2020-12-27
+fix bug 2020-12-27
 
 -   [x] add the `pvca` function form pvca packgas in Bioconductor,this
     function can help us to estimate factors’ partition of the total
@@ -70,7 +70,7 @@ The workflow employs several successive procedures available in :
     sva::combat, only changing name. the sva website is
     “<https://bioconductor.org/packages/release/bioc/html/sva.html>”
 
-### add function 2020-12-29
+add function 2020-12-29
 
 -   [x] add the `snm_fix` function to fix batch effect and return the
     normalizeed data. The detailed theory can be found on the
@@ -78,7 +78,7 @@ The workflow employs several successive procedures available in :
     I adjusted the input style of parameters to a unified form in
     fixbatch packages.This is not as simple as I imagined.
 
-## Beginning
+## :red\_circle: Getting started
 
 the R packages is full fo bugs, beacuse it’s a naive packagse, so I
 suggest every time when you use the R packages, should update R packages
@@ -88,7 +88,7 @@ fristly. Remember this step everytimes!
 devtools::update_packages("fixbatch")
 ```
 
-## Insatll
+## :arrow\_down\_small:Insatll
 
 ``` r
 devtools::install_github("wangjiaxuan/fixbatch")
@@ -98,7 +98,7 @@ devtools::install_github("wangjiaxuan/fixbatch")
 library(fixbatch)
 ```
 
-## Function
+## :gun: Function
 
 ### col\_cv
 
@@ -198,13 +198,13 @@ The function base on snm R
 packaegs(<http://www.bioconductor.org/packages/release/bioc/html/snm.html>),
 packaged into fixbatch. Citation within R, enter citation(“snm”)).
 
-# 开发过程
+# :cn: 开发过程
 
 1.  [处理批次效应连续剧第一集（失败的R包）](https://mp.weixin.qq.com/s/_LNdR7b4LRhiKGqIcEXX2A)
 2.  [处理批次效应连续剧第二集（R包小有成效）](https://mp.weixin.qq.com/s/pWO9em16WE90T-6vxO3HMg)
 3.  [处理批次效应连续剧第三集（R包基本OK）](https://abego.cn/2020/12/24/remove-the-batch-effect-series-3-r-package-more-power/)
 
-# References
+# :blue\_book:References
 
 Leek, J.T. and Storey, J.D. (2007) Capturing heterogeneity in gene
 expression studies by surrogate variable analysis. PLOS Genetics, 3.

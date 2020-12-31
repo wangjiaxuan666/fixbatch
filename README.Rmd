@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![](https://img.shields.io/github/issues/wangjiaxuan666/fixbatch)](https://img.shields.io/github/stars/wangjiaxuan666/fixbatch)
 <!-- badges: end -->
 
-# fixbatch:wrench:  <img src='https://pic-1259340288.cos.ap-guangzhou.myqcloud.com/img/fixbatch_hexSticker.png' align="right" height="139" />
+# fixbatch:wrench:  <img src='man/figures/fixbatch_hexSticker.png' align="right" height="139" />
 
 **Author**: [Jiaxuan Wang](https://abego.cn/) :pencil: 
 

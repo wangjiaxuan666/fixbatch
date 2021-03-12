@@ -71,16 +71,16 @@ snm_fix_all <- function(data = NULL,
     if(is.null(bv)){
       if(is.null(bio.var)){
         stop("the biology variables is NULL")
-      } else {
-        bio_var = batch[bv]
       }
+    } else {
+      bio_var = batch[bv]
     }
-    if(is.null(bv)){
+    if(is.null(av)){
       if(is.null(adj.var)){
         stop("the adjust variables is NULL")
-      } else {
-        adj_var = batch[av]
-      }
+      } 
+    } else {
+      adj_var = batch[av]
     }
     if(is.null(iv)){
       int.var = NULL
@@ -91,8 +91,10 @@ snm_fix_all <- function(data = NULL,
   # analysis
   # change the variables input when model.matrix can't work well automatically
   if(is.null(bio.var)){bio.var = model.matrix(~ ., data = bio_var)}
-  if(is.null(adj.var)){bio.var = model.matrix(~ ., data = adj_var)}
-  if(is.null(int.var)){bio.var = model.matrix(~ ., data = int_var)}
+  if(is.null(adj.var)){adj.var = model.matrix(~ ., data = adj_var)}
+  if(!is.null(iv)){
+    if(is.null(int.var)){int.var = model.matrix(~ ., data = int_var)}
+  }
   re<- snm::snm(raw.dat = data,
                 bio.var = bio.var,
                 adj.var = adj.var,
@@ -111,9 +113,9 @@ snm_fix_all <- function(data = NULL,
 
 #' Title Extract the  normalizeed data by function "snm". detailed description in which
 #' the function base on snm R packaegs(http://www.bioconductor.org/packages/release/bioc/html/snm.html),
-#' packaged into fixbatch. Citation within R, enter citation("snm")).
+#' packaged into fixbatch. Citation within R, enter citation("snm")).snm_fix_all function is for all the result. snm_fix just for the adjust exp data.
 #'
-#' @param ... see in "?snm_fix_all" on "fixbatch"
+#' @param ... see in "?snm_fix_all"(for all result output) on "fixbatch"
 #' @importFrom xbox get_df get_mat
 #' @importFrom  snm snm
 #' @importFrom stats model.matrix

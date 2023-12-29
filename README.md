@@ -91,7 +91,7 @@ devtools::update_packages("fixbatch")
 ## :arrow\_down\_small:Insatll
 
 ``` r
-devtools::install_github("wangjiaxuan/fixbatch")
+devtools::install_github("wangjiaxuan666/fixbatch")
 ```
 
 ``` r
